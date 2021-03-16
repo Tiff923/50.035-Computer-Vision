@@ -20,15 +20,15 @@ train_dir = r'.\imgs\train' # image folder
 
 # get the list of jpegs from sub image class folders
 c0_imgs = [fn for fn in os.listdir(f'{train_dir}/c0') if fn.endswith('.jpg')]
-c1_imgs = [fn for fn in os.listdir(f'{train_dir}/c1') if fn.endswith('.jpg')]
-c2_imgs = [fn for fn in os.listdir(f'{train_dir}/c2') if fn.endswith('.jpg')]
-c3_imgs = [fn for fn in os.listdir(f'{train_dir}/c3') if fn.endswith('.jpg')]
-c4_imgs = [fn for fn in os.listdir(f'{train_dir}/c4') if fn.endswith('.jpg')]
-c5_imgs = [fn for fn in os.listdir(f'{train_dir}/c5') if fn.endswith('.jpg')]
-c6_imgs = [fn for fn in os.listdir(f'{train_dir}/c6') if fn.endswith('.jpg')]
-c7_imgs = [fn for fn in os.listdir(f'{train_dir}/c7') if fn.endswith('.jpg')]
-c8_imgs = [fn for fn in os.listdir(f'{train_dir}/c8') if fn.endswith('.jpg')]
-c9_imgs = [fn for fn in os.listdir(f'{train_dir}/c9') if fn.endswith('.jpg')]
+# c1_imgs = [fn for fn in os.listdir(f'{train_dir}/c1') if fn.endswith('.jpg')]
+# c2_imgs = [fn for fn in os.listdir(f'{train_dir}/c2') if fn.endswith('.jpg')]
+# c3_imgs = [fn for fn in os.listdir(f'{train_dir}/c3') if fn.endswith('.jpg')]
+# c4_imgs = [fn for fn in os.listdir(f'{train_dir}/c4') if fn.endswith('.jpg')]
+# c5_imgs = [fn for fn in os.listdir(f'{train_dir}/c5') if fn.endswith('.jpg')]
+# c6_imgs = [fn for fn in os.listdir(f'{train_dir}/c6') if fn.endswith('.jpg')]
+# c7_imgs = [fn for fn in os.listdir(f'{train_dir}/c7') if fn.endswith('.jpg')]
+# c8_imgs = [fn for fn in os.listdir(f'{train_dir}/c8') if fn.endswith('.jpg')]
+# c9_imgs = [fn for fn in os.listdir(f'{train_dir}/c9') if fn.endswith('.jpg')]
 
 # convert images to grayscale (black and white)
 def grayscale(imglist, subclass, img_dir):
@@ -49,15 +49,15 @@ def grayscale(imglist, subclass, img_dir):
     return out
 
 c0_gray = grayscale(c0_imgs, '/c0/', train_dir)
-c1_gray = grayscale(c1_imgs, '/c1/', train_dir)
-c2_gray = grayscale(c2_imgs, '/c2/', train_dir)
-c3_gray = grayscale(c3_imgs, '/c3/', train_dir)
-c4_gray = grayscale(c4_imgs, '/c4/', train_dir)
-c5_gray = grayscale(c5_imgs, '/c5/', train_dir)
-c6_gray = grayscale(c6_imgs, '/c6/', train_dir)
-c7_gray = grayscale(c7_imgs, '/c7/', train_dir)
-c8_gray = grayscale(c8_imgs, '/c8/', train_dir)
-c9_gray = grayscale(c9_imgs, '/c9/', train_dir)
+# c1_gray = grayscale(c1_imgs, '/c1/', train_dir)
+# c2_gray = grayscale(c2_imgs, '/c2/', train_dir)
+# c3_gray = grayscale(c3_imgs, '/c3/', train_dir)
+# c4_gray = grayscale(c4_imgs, '/c4/', train_dir)
+# c5_gray = grayscale(c5_imgs, '/c5/', train_dir)
+# c6_gray = grayscale(c6_imgs, '/c6/', train_dir)
+# c7_gray = grayscale(c7_imgs, '/c7/', train_dir)
+# c8_gray = grayscale(c8_imgs, '/c8/', train_dir)
+# c9_gray = grayscale(c9_imgs, '/c9/', train_dir)
 
 # convert images using histogram equalization
 def histeq(imglist):
@@ -74,15 +74,15 @@ def histeq(imglist):
     return out
 
 c0_eq = histeq(c0_gray)
-c1_eq = histeq(c1_gray)
-c2_eq = histeq(c2_gray)
-c3_eq = histeq(c3_gray)
-c4_eq = histeq(c4_gray)
-c5_eq = histeq(c5_gray)
-c6_eq = histeq(c6_gray)
-c7_eq = histeq(c7_gray)
-c8_eq = histeq(c8_gray)
-c9_eq = histeq(c9_gray)
+# c1_eq = histeq(c1_gray)
+# c2_eq = histeq(c2_gray)
+# c3_eq = histeq(c3_gray)
+# c4_eq = histeq(c4_gray)
+# c5_eq = histeq(c5_gray)
+# c6_eq = histeq(c6_gray)
+# c7_eq = histeq(c7_gray)
+# c8_eq = histeq(c8_gray)
+# c9_eq = histeq(c9_gray)
 
 # mix images of a class
 def mix(imglist):
@@ -106,15 +106,15 @@ def mix(imglist):
     return out
 
 c0_mix = mix(c0_eq)
-c1_mix = mix(c1_eq)
-c2_mix = mix(c2_eq)
-c3_mix = mix(c3_eq)
-c4_mix = mix(c4_eq)
-c5_mix = mix(c5_eq)
-c6_mix = mix(c6_eq)
-c7_mix = mix(c7_eq)
-c8_mix = mix(c8_eq)
-c9_mix = mix(c9_eq)
+# c1_mix = mix(c1_eq)
+# c2_mix = mix(c2_eq)
+# c3_mix = mix(c3_eq)
+# c4_mix = mix(c4_eq)
+# c5_mix = mix(c5_eq)
+# c6_mix = mix(c6_eq)
+# c7_mix = mix(c7_eq)
+# c8_mix = mix(c8_eq)
+# c9_mix = mix(c9_eq)
 
 # randomly rotate images
 # random horizonal shift/vertical shift images
@@ -177,27 +177,27 @@ def rotate_shift(imglist):
     return out
 
 c0_final = rotate_shift(c0_mix)
-c1_final = rotate_shift(c1_mix)
-c2_final = rotate_shift(c2_mix)
-c3_final = rotate_shift(c3_mix)
-c4_final = rotate_shift(c4_mix)
-c5_final = rotate_shift(c5_mix)
-c6_final = rotate_shift(c6_mix)
-c7_final = rotate_shift(c7_mix)
-c8_final = rotate_shift(c8_mix)
-c9_final = rotate_shift(c9_mix)
+# c1_final = rotate_shift(c1_mix)
+# c2_final = rotate_shift(c2_mix)
+# c3_final = rotate_shift(c3_mix)
+# c4_final = rotate_shift(c4_mix)
+# c5_final = rotate_shift(c5_mix)
+# c6_final = rotate_shift(c6_mix)
+# c7_final = rotate_shift(c7_mix)
+# c8_final = rotate_shift(c8_mix)
+# c9_final = rotate_shift(c9_mix)
 
 # visually check image conversion
-# plt.figure(figsize=(20,10))
-# plt.subplot(141),plt.imshow(c0_gray[0], cmap='gray'),
-# plt.title('Grayscaled image'),plt.xticks([]), plt.yticks([])
-# plt.subplot(142),plt.imshow(c0_eq[0], cmap='gray'),
-# plt.title('Hist Equalized image'),plt.xticks([]), plt.yticks([])
-# plt.subplot(143),plt.imshow(c0_mix[0], cmap='gray'),
-# plt.title('Mixed image'),plt.xticks([]), plt.yticks([])
-# plt.subplot(144),plt.imshow(c0_final[0], cmap='gray'),
-# plt.title('Rotated/shifted image'),plt.xticks([]), plt.yticks([])
-# plt.show()
+plt.figure(figsize=(20,10))
+plt.subplot(141),plt.imshow(c0_gray[0], cmap='gray'),
+plt.title('Grayscaled image'),plt.xticks([]), plt.yticks([])
+plt.subplot(142),plt.imshow(c0_eq[0], cmap='gray'),
+plt.title('Hist Equalized image'),plt.xticks([]), plt.yticks([])
+plt.subplot(143),plt.imshow(c0_mix[0], cmap='gray'),
+plt.title('Mixed image'),plt.xticks([]), plt.yticks([])
+plt.subplot(144),plt.imshow(c0_final[0], cmap='gray'),
+plt.title('Rotated/shifted image'),plt.xticks([]), plt.yticks([])
+plt.show()
 
 # save the augmented images under imgs folder
 def saveimg(imglist, img_namelist,subclass,dir):
@@ -224,12 +224,12 @@ def saveimg(imglist, img_namelist,subclass,dir):
 
 target_folder = r'.\imgs\trainprocessed'
 saveimg(c0_final,c0_imgs,'/c0/',target_folder)
-saveimg(c1_final,c1_imgs,'/c1/',target_folder)
-saveimg(c2_final,c2_imgs,'/c2/',target_folder)
-saveimg(c3_final,c3_imgs,'/c3/',target_folder)
-saveimg(c4_final,c4_imgs,'/c4/',target_folder)
-saveimg(c5_final,c5_imgs,'/c5/',target_folder)
-saveimg(c6_final,c6_imgs,'/c6/',target_folder)
-saveimg(c7_final,c7_imgs,'/c7/',target_folder)
-saveimg(c8_final,c8_imgs,'/c8/',target_folder)
-saveimg(c9_final,c9_imgs,'/c9/',target_folder)
+# saveimg(c1_final,c1_imgs,'/c1/',target_folder)
+# saveimg(c2_final,c2_imgs,'/c2/',target_folder)
+# saveimg(c3_final,c3_imgs,'/c3/',target_folder)
+# saveimg(c4_final,c4_imgs,'/c4/',target_folder)
+# saveimg(c5_final,c5_imgs,'/c5/',target_folder)
+# saveimg(c6_final,c6_imgs,'/c6/',target_folder)
+# saveimg(c7_final,c7_imgs,'/c7/',target_folder)
+# saveimg(c8_final,c8_imgs,'/c8/',target_folder)
+# saveimg(c9_final,c9_imgs,'/c9/',target_folder)
