@@ -6,9 +6,13 @@ from tensorflow.keras import layers
 from tensorflow.keras import Model 
 import matplotlib.pyplot as plt
 
-base_dir = './tmp/cats_and_dogs_filtered'
+# base_dir = './tmp/cats_and_dogs_filtered'
+# train_dir = os.path.join(base_dir, 'train')
+# validation_dir = os.path.join(base_dir, 'validation')
+
+base_dir = './imgs/'
 train_dir = os.path.join(base_dir, 'train')
-validation_dir = os.path.join(base_dir, 'validation')
+validation_dir = os.path.join(base_dir, 'test')
 
 # Add our data-augmentation parameters to ImageDataGenerator
 
